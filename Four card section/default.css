@@ -52,10 +52,10 @@ body {
     width: 23vw;
     height: 25vh;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px hsl(229, 6%, 66%);
+    box-shadow: 3px -2px 5px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
     -webkit-transition-property: transform;
     transition-property: transform;
 }
@@ -103,55 +103,86 @@ img {
     right: 2rem;
     bottom: 2rem;
 }
-.card h2{
+
+.card h2 {
     font-size: 1.4rem;
     color: hsl(234, 12%, 34%);
     font-weight: 600;
 }
 
-.card p{
+.card p {
     font-size: .9rem;
     color: hsl(229, 6%, 66%);
     font-weight: 200;
 }
+
+/*FOOTER*/
+.attribution {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    bottom: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 /* MEDIA QUERIES */
 
-@media (min-width: 800px) and (max-width: 1259px){
-    .heading{
+@media (min-width: 800px) and (max-width: 1259px) {
+    .grid-container {
+        position: relative;
+    }
+
+    .heading {
         width: 80vw;
     }
-    .wrapper-cards{
+
+    .wrapper-cards {
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .card{
+
+    .card {
         width: 80vw;
         margin-bottom: 2rem;
     }
-    .card img{
+
+    .card img {
         width: 9vw;
     }
 }
-@media (min-width: 320px) and (max-width: 799px){
-    body{
+
+@media (min-width: 320px) and (max-width: 799px) {
+    body {
         position: relative;
     }
-    .heading{
+    .attribution{
+        position: sticky;
+    }
+    .heading {
         width: 80vw;
     }
-    .wrapper-cards{
+
+    .wrapper-cards {
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .card{
+
+    .card {
         width: 80vw;
         margin-bottom: 2rem;
     }
-    .card img{
+
+    .card img {
         width: 15vw;
     }
 }
