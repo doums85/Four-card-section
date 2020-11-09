@@ -52,7 +52,7 @@ body {
     width: 23vw;
     height: 25vh;
     border-radius: 10px;
-    box-shadow: 3px -2px 5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     position: relative;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.5s;
@@ -134,7 +134,7 @@ img {
 /* MEDIA QUERIES */
 
 @media (min-width: 800px) and (max-width: 1259px) {
-    .grid-container {
+    body {
         position: relative;
     }
 
@@ -157,15 +157,17 @@ img {
     .card img {
         width: 9vw;
     }
+
+    .attribution {
+        position: static;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 799px) {
     body {
         position: relative;
     }
-    .attribution{
-        position: sticky;
-    }
+
     .heading {
         width: 80vw;
     }
@@ -184,5 +186,9 @@ img {
 
     .card img {
         width: 15vw;
+    }
+
+    .attribution {
+        position: static;
     }
 }
