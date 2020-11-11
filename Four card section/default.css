@@ -1,194 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 * {
     margin: 0;
 }
 
 body {
-    background: hsl(0, 0%, 98%);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
+    background: hsl(204, 43%, 93%);
 }
 
+/* GRID CONTAINER */
 .grid-container {
-    width: 90vw;
+    width: 100vw;
+    height: 60vh;
     display: grid;
-    grid-template-rows: 1fr, auto;
-    grid-row-gap: 3rem;
+    grid-template-rows: repeat(2, auto);
     justify-content: center;
-    margin: 4rem auto;
+    margin: auto ;
+    transform: translateY(35%);
 }
 
-/* HEADING */
-.heading {
-    width: 35vw;
-    color: hsl(229, 6%, 66%);
-    text-align: center;
+.wrapper {
+    background: white;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+}
+
+.wrapper-text {
+    width: 40vw;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
     margin: 0 auto;
 }
 
-.heading h1,
-.heading h2 {
-    font-size: 2.2rem;
-    color: hsl(234, 12%, 34%);
+.wrapper h1 {
+    font-size: 2.5rem;
+    color: hsl(179, 62%, 43%);
+    padding-top: 2rem;
 }
 
-.heading h1 {
-    font-weight: 200;
+.wrapper .green {
+    color: hsl(71, 73%, 54%);
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
-.heading h2 {
-    margin-bottom: 1.5rem;
+.wrapper p {
+    color: hsl(218, 22%, 67%);
 }
 
-/* CARDS GROUP */
-
-.wrapper-cards {
+/* SECTION */
+.wrapper-section {
+    height: 30vh;
     display: grid;
-    grid-template-columns: repeat(3, 25vw);
-    grid-template-rows: 17vh repeat(2, 12.5vh) 17vh;
+    grid-template-columns: repeat(2, 50%);
 }
 
-.card {
-    width: 23vw;
-    height: 25vh;
-    border-radius: 10px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    position: relative;
-    -webkit-transition-duration: 0.3s;
+.wrapper-section h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* LEFT */
+.left {
+    background: hsl(179, 62%, 43%);
+    border-radius: 0 0 0 10px;
+}
+
+.text-left {
+    width: 20vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: repeat (4, auto);
+    grid-row-gap: 1rem;
+    color: white;
+}
+
+
+
+.left .price {
+    font-size: 2rem;
+}
+
+.left .sub-text {
+    color: hsl(179, 47%, 52%);
+}
+
+.left button {
+    border: transparent;
+    border-radius: 9px;
+    box-shadow: 2px 2px 2px 2px rgba(152, 166, 189, .5);
+    background: hsl(71, 73%, 54%);
+    margin-top: 2rem;
+    padding: 1.1rem;
+    -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    cursor: pointer;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.left button:hover,
+.left button:focus,
+.left button:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: 60%;
+    opacity: 80%;
 }
 
-.card-cyan {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    border-top: 5px solid hsl(180, 62%, 55%);
+.left button a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
 }
 
-.card-red {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    border-top: 5px solid hsl(0, 78%, 62%);
+/* RIGHT */
+
+.right {
+    background: hsl(179, 47%, 52%);
+    border-radius: 0 0 10px 0;
+    color: white;
 }
 
-.card-orange {
-    grid-column: 2/3;
-    grid-row: 3/5;
-    border-top: 5px solid orange;
+.right .text-right {
+    width: 20vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 1.5rem;
 }
 
-
-.card-blue {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    border-top: 5px solid hsl(212, 86%, 64%);
-}
-
-.wrapper-card {
-    margin: 2rem;
-}
-
-img {
-    width: 5vw;
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-}
-
-.card h2 {
-    font-size: 1.4rem;
-    color: hsl(234, 12%, 34%);
-    font-weight: 600;
-}
-
-.card p {
+.right .text-right p {
+    width: 15vw;
     font-size: .9rem;
-    color: hsl(229, 6%, 66%);
-    font-weight: 200;
+    line-height: 1.5rem;
+    font-weight: lighter;
 }
 
-/*FOOTER*/
-.attribution {
-    width: 100%;
-    font-size: 11px;
-    text-align: center;
-    bottom: 0;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+footer {
+    display: flex;
+    bottom: 0rem;
 }
 
 /* MEDIA QUERIES */
-
-@media (min-width: 800px) and (max-width: 1259px) {
-    body {
-        position: relative;
-    }
-
-    .heading {
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+    .grid-container {
         width: 80vw;
-    }
-
-    .wrapper-cards {
         height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        grid-template-rows: repeat(2, auto);
+        transform: translateY(-5%);
+        margin: 5rem auto;
     }
 
-    .card {
+    .wrapper {
+        margin: 0 auto;
+    }
+
+    .wrapper-text {
         width: 80vw;
-        margin-bottom: 2rem;
+        height: 25vh;
+        display: grid;
+        grid-template-rows:  .5fr .3fr 1.2fr;
+        border-radius: 10px 10px 0 0;
+        margin: 0 auto;
     }
 
-    .card img {
-        width: 9vw;
+    .wrapper-text h1 {
+        font-size: 2rem;
     }
 
-    .attribution {
-        position: static;
-    }
-}
+    .wrapper-section {
+        grid-template-columns: auto;
 
-@media (min-width: 320px) and (max-width: 799px) {
-    body {
-        position: relative;
     }
 
-    .heading {
-        width: 80vw;
+    .left {
+        border-radius: 0;
     }
 
-    .wrapper-cards {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    .right {
+        border-radius: 0 0 10px 10px;
     }
 
-    .card {
-        width: 80vw;
-        margin-bottom: 2rem;
+    .text-left,
+    .right .text-right,
+    .right .text-right p {
+        width: 70vw;
     }
 
-    .card img {
-        width: 15vw;
-    }
-
-    .attribution {
-        position: static;
+    .right .text-right p {
+        height: 15vh;
     }
 }
